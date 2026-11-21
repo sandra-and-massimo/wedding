@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-title-key="r.metaTitle">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RSVP · Sandra &amp; Massimo</title>
+<meta name="description" content="Saturday 8 May 2027, Torre di Palme and Porto San Giorgio. Tell us who's coming." data-i18n-attr="content:meta.desc">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0B5CAD">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sandra &amp; Massimo · 8.5.2027">
+<meta property="og:description" content="Torre di Palme · Porto San Giorgio">
+<meta property="og:image" content="https://sandra-and-massimo.github.io/wedding/og.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+(function(){var L=['it','es','en'],d=document.documentElement,h=location.hash.slice(1).toLowerCase(),q=(location.search.match(/[?&]lang=(\w\w)/)||[])[1],s=null,b;
+try{s=localStorage.getItem('sm-lang')}catch(e){}
+b=((navigator.languages&&navigator.languages[0])||navigator.language||'').slice(0,2).toLowerCase();
+d.lang=L.indexOf(h)>-1?h:L.indexOf(q)>-1?q:L.indexOf(s)>-1?s:(b==='it'||b==='es')?b:'en';
+d.className+=' js';setTimeout(function(){d.classList.add('ready')},1500);})();
+</script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="gifts.css">
+<link rel="stylesheet" href="rsvp.css">
+</head>
+<body class="gifts-page rsvp-page">
+<a class="skip" href="#reply" data-i18n="skip">Skip to content</a>
+
+<nav class="langbar" aria-label="Language" data-i18n-attr="aria-label:lang.label">
+  <button type="button" data-lang="it" lang="it" aria-label="Italiano">IT</button>
+  <button type="button" data-lang="es" lang="es" aria-label="Español">ES</button>
+  <button type="button" data-lang="en" lang="en" aria-label="English">EN</button>
+</nav>
+
+<header class="hero hero--short">
+  <div class="hero-canvas" aria-hidden="true"></div>
+  <div class="valance valance--top" aria-hidden="true"></div>
+  <a class="monogram monogram--link" href="index.html" data-href="index.html" data-keep-lang aria-label="Back to the wedding page" data-i18n-attr="aria-label:r.back">
+    <svg class="ic" viewBox="0 0 256 256" aria-hidden="true" data-icon="arrow-left"></svg><span>S&amp;M</span>
+  </a>
+  <div class="hero-inner">
+    <div class="sign hero-sign gift-intro">
+      <h1 class="gift-title" data-i18n="rsvp.title">Will you be there?</h1>
+      <p class="gift-lede rsvp-when" data-i18n="foot.date">Saturday 8 May 2027 · Torre di Palme &amp; Porto San Giorgio</p>
+      <p data-i18n="r.intro">Tell us who's coming. We'll email you a link so you can change your reply at any time.</p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="checkout reply" id="reply" tabindex="-1" aria-labelledby="reply-title">
+    <div class="hem" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="sign checkout-sign">
+        <p class="demo-note" id="demo-note" hidden data-i18n="r.demo">Demo mode: Supabase isn't connected yet, so replies aren't saved.</p>
+        <p class="link-error" id="link-error" role="alert" hidden data-i18n="r.linkErr">This link isn't valid. Fill in the form with your email and we'll send you a new one.</p>
+        <p class="signed-as" id="signed-as" hidden><span id="signed-as-text"></span> <button type="button" class="btn-text" id="sign-out" data-i18n="r.notYou">Not you?</button></p>
+        <h2 id="reply-title" class="h2" data-i18n="r.formTitle">Your reply</h2>
+
+        <form class="pledge rsvp-form" id="rsvp" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="r-first" data-i18n="r.first">First name</label>
+              <input id="r-first" name="first" autocomplete="given-name" required maxlength="80">
+            </div>
+            <div class="field">
+              <label for="r-last" data-i18n="r.last">Last name</label>
+              <input id="r-last" name="last" autocomplete="family-name" required maxlength="80">
+            </div>
+          </div>
+          <div class="field" id="email-field">
+            <label for="r-email" data-i18n="r.email">Email</label>
+            <input id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200" aria-describedby="r-email-hint">
+            <p class="hint" id="r-email-hint"><span data-i18n="r.emailHint">We'll send you a link to see or change your reply. Only Sandra and Massimo will see your details.</span> <a class="privacy-link" href="privacy.html" data-href="privacy.html" data-keep-lang target="_blank" rel="noopener" data-i18n="priv.link">How we handle your data</a></p>
+          </div>
+          <label class="consent"><input type="checkbox" id="r-news" name="news"><span data-i18n="news.optin">Keep us posted by email if anything changes (times, shuttle…). Only about the wedding.</span></label>
+
+          <fieldset class="choice-set">
+            <legend data-i18n="rsvp.title">Will you be there?</legend>
+            <div class="choice">
+              <label><input type="radio" name="attending" value="yes"><span data-i18n="r.yes">Yes, I'll be there</span></label>
+              <label><input type="radio" name="attending" value="no"><span data-i18n="r.no">Sorry, I can't come</span></label>
+            </div>
+          </fieldset>
+
+          <div id="coming" hidden>
+            <fieldset class="people-set">
+              <legend data-i18n="r.companions">Who's coming with you?</legend>
+              <p class="hint" data-i18n="r.companionsHint">Add everyone coming with you, children included. Leave it empty if you're coming alone.</p>
+              <ul class="people" id="people"></ul>
+              <button type="button" class="btn btn--line add-person" id="add-person"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" data-icon="plus"></svg><span data-i18n="r.addPerson">Add a person</span></button>
+            </fieldset>
+
+            <fieldset class="choice-set">
+              <legend data-i18n="r.shuttle">Will you use the shuttle bus?</legend>
+              <p class="hint" data-i18n="r.shuttleHint">Time and departure point to be announced.</p>
+              <div class="choice choice--short">
+                <label><input type="radio" name="shuttle" value="yes"><span data-i18n="r.yesShort">Yes</span></label>
+                <label><input type="radio" name="shuttle" value="no"><span data-i18n="r.noShort">No</span></label>
+              </div>
+              <div class="seats" id="seats-block" hidden>
+                <span class="seats-label" id="seats-label" data-i18n="r.seats">How many seats?</span>
+                <div class="stepper" role="group" aria-labelledby="seats-label">
+                  <button type="button" data-seat="-1" aria-label="−"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" data-icon="minus"></svg></button>
+                  <output id="seats" aria-live="polite">1</output>
+                  <button type="button" data-seat="1" aria-label="+"><svg class="ic" viewBox="0 0 256 256" aria-hidden="true" data-icon="plus"></svg></button>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="r-intol" data-i18n="r.intol">Intolerances or allergies (optional)</label>
+              <textarea id="r-intol" rows="2" maxlength="1000" aria-describedby="r-intol-hint"></textarea>
+              <p class="hint" id="r-intol-hint" data-i18n="r.intolHint">For everyone in your group, with names if it helps. We'll use it only for the menu, with the caterer.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="r-notes" data-i18n="r.notes">Anything we should keep in mind, or a message for us (optional)</label>
+            <textarea id="r-notes" rows="4" maxlength="2000"></textarea>
+          </div>
+
+          <p class="form-error" id="rsvp-error" role="alert" hidden></p>
+          <button class="btn btn--rsvp" type="submit" id="rsvp-submit" data-i18n="r.send">Send my reply</button>
+        </form>
+
+        <div class="result" id="rsvp-result" hidden tabindex="-1"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot-names">Sandra &amp; Massimo</p>
+  <p><a href="index.html" data-href="index.html" data-keep-lang data-i18n="r.back">Back to the wedding page</a></p>
+  <p><a href="privacy.html" data-href="privacy.html" data-keep-lang data-i18n="foot.privacy">Privacy</a></p>
+</footer>
+
+<script src="icons.js"></script>
+<script src="gift-config.js"></script>
+<script src="rsvp-i18n.js"></script>
+<script src="main.js"></script>
+<script src="rsvp.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/* RSVP page: builds on styles.css and gifts.css (header, sign, fields, buttons). */
+
+.rsvp-when { color: var(--orange-ink); font-weight: 800; }
+.reply { padding-top: calc(var(--s) / 2 + clamp(48px, 6vw, 88px)); }
+.reply:focus { outline: none; box-shadow: none; }
+.reply .checkout-sign > .h2 { margin-top: 4px; }
+
+.hint { font-size: .95rem; margin-top: 6px; }
+.rsvp-form { margin-top: 24px; }
+.rsvp-form > * + *, #coming > * + * { margin-top: 22px; }
+.rsvp-form .field-row + .field { margin-top: 22px; }
+
+fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+legend { font-weight: 800; font-size: 1.2rem; padding: 0; }
+legend + .hint { margin-top: 2px; }
+
+/* yes / no choices as pills */
+.choice { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.choice label { position: relative; flex: 1 1 220px; }
+.choice--short label { flex: 0 0 auto; }
+.choice input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.choice span {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 52px; padding: 10px 24px; border: 2px solid var(--navy); border-radius: 999px;
+  font-weight: 800; cursor: pointer; background: #fff;
+  transition: background-color 200ms ease, color 200ms ease, transform 160ms var(--ease-out);
+}
+.choice--short span { min-width: 96px; }
+.choice input:checked + span { background: var(--navy); color: #fff; }
+.choice input:focus-visible + span { outline: 3px solid var(--navy); outline-offset: 3px; box-shadow: 0 0 0 6px #fff; }
+.choice label:active span { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .choice input:not(:checked) + span:hover { background: var(--tint); } }
+
+/* people coming along */
+.people { list-style: none; padding: 0; margin-top: 12px; }
+.person { display: grid; grid-template-columns: minmax(0, 1fr) auto auto 40px; align-items: end; gap: 10px 14px; padding: 14px 0; border-top: 1px solid rgb(10 46 92 / .16); }
+.person:last-child { border-bottom: 1px solid rgb(10 46 92 / .16); }
+.person .field { margin: 0; }
+.person-age input { width: 84px; }
+.check { display: inline-flex; align-items: center; gap: 8px; min-height: 50px; font-weight: 700; cursor: pointer; }
+.check input { width: 22px; height: 22px; accent-color: var(--navy); }
+.person-remove { align-self: end; margin-bottom: 5px; }
+.add-person { margin-top: 14px; }
+@media (max-width: 560px) {
+  .person { grid-template-columns: auto auto 1fr; }
+  .person-name { grid-column: 1 / -2; }
+  .person-remove { grid-column: 3; grid-row: 1; justify-self: end; }
+  .check { grid-column: 1; }
+  .person-age { grid-column: 2 / -1; }
+}
+
+/* shuttle seats */
+.seats { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; margin-top: 16px; }
+.seats-label { font-weight: 700; }
+.seats .stepper { margin: 0; min-width: 160px; }
+
+/* signed in, errors */
+.signed-as { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin-bottom: 12px; padding: 10px 16px; border-radius: 14px; background: var(--tint); font-weight: 650; }
+.signed-as .btn-text { padding-block: 4px; min-height: 36px; }
+.link-error { margin-bottom: 14px; padding: 12px 16px; border-radius: 14px; border: 2px solid var(--orange); font-weight: 650; }
+
+/* after sending */
+.mail-note { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; margin-top: 20px; padding: 16px 20px; border-radius: 18px; background: var(--tint); }
+.mail-note p { grid-column: 2; }
+.mail-note p + p { margin-top: 6px; }
+.mail-ic { grid-row: 1 / span 2; width: 28px; height: 28px; fill: var(--blue); margin-top: 2px; }
+.next-gift { margin-top: 28px; padding-top: 24px; border-top: 2px solid var(--navy); }
+.next-gift h4 { font-size: clamp(1.4rem, 1vw + 1.1rem, 1.9rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
+.next-gift p { margin-top: 8px; max-width: 52ch; }
+.next-gift .btn--navy { margin-top: 18px; }
+.result-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 28px; }
+@media (max-width: 560px) { .next-gift .btn--navy { display: flex; width: 100%; } }
+.mail-note.is-error { background: #FFF1EB; }
+.mail-note .resend { margin-top: 4px; }
+.mail-detail { font-size: .85rem; opacity: .85; overflow-wrap: anywhere; }
+
+/* privacy page */
+.policy h2 { font-size: clamp(1.3rem, .8vw + 1.05rem, 1.7rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.15; margin-top: 32px; }
+.policy h2:first-child { margin-top: 0; }
+.policy h2 + p, .policy h2 + ul { margin-top: 8px; }
+.policy p, .policy li { max-width: 65ch; }
+.policy ul { padding-left: 1.2em; }
+.policy li + li { margin-top: 6px; }
+.policy a { font-weight: 700; color: inherit; overflow-wrap: anywhere; }
+.policy-date { margin-top: 36px; font-size: .9rem; opacity: .8; }
