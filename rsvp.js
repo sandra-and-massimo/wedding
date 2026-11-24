@@ -32,7 +32,8 @@
   var seats = 1, seatsTouched = false;
   var mode = "new";           // "new" (first reply) or "edit" (opened with the personal link)
   var editKey = null, editEmail = null;
-  var firstReply = false;     // known from a gift, but no reply yet: name and email are already filled in
+  var firstReply = false;
+  var editable = false;       // can a sent reply still be changed? (database setting "rsvp_editable", see README)     // known from a gift, but no reply yet: name and email are already filled in
   var lastResult = null;
 
   /* ---------- helpers ---------- */
@@ -141,22 +142,49 @@
   }
 
   var SQL_ERRORS = { name_required: "r.errName", bad_email: "r.errEmail", attending_required: "r.errAttending",
-    bad_companions: "r.errCompanion", bad_age: "r.errAge", bad_seats: "r.errSeats", bad_link: "r.linkErr" };
+    bad_companions: "r.errCompanion", bad_age: "r.errAge", bad_seats: "r.errSeats", bad_link: "r.linkErr", already_replied: "r.errLocked" };
   function sqlError(err) {
     var m = (err && err.message) || "";
     for (var k in SQL_ERRORS) if (m.indexOf(k) > -1) return t(SQL_ERRORS[k]);
     return t("r.errSave");
   }
 
+  /* ---------- a reply, as a short summary (review before sending, and the read-only view) ---------- */
+  function summaryHTML(d) {
+    var rows = [];
+    function row(k, v) { rows.push("<div><dt>" + esc(t(k)) + "</dt><dd>" + v + "</dd></div>"); }
+    row("r.sumName", esc(((d.first_name || "") + " " + (d.last_name || "")).trim()));
+    row("r.sumComing", esc(t(d.attending ? "r.yes" : "r.no")));
+    if (d.attending) {
+      var c = (d.companions || []).map(function (p) {
+        return esc(p.name) + (p.child ? " (" + esc(t("r.childAge", { age: p.age == null ? "?" : p.age })) + ")" : "");
+      });
+      row("r.sumWith", c.length ? c.join("<br>") : esc(t("r.sumNobody")));
+      row("r.sumShuttle", esc(d.shuttle ? String(d.shuttle_seats) : t("r.noShort")));
+      if (d.intolerances) row("r.sumIntol", esc(d.intolerances));
+    }
+    var notes = [d.notes, d.message].filter(Boolean).join("\n\n");
+    if (notes) row("r.sumNotes", esc(notes).replace(/\n/g, "<br>"));
+    row("r.sumNews", esc(t(d.news ? "r.yesShort" : "r.noShort")));
+    return '<dl class="reply-summary">' + rows.join("") + "</dl>";
+  }
+
   /* ---------- result screen ---------- */
   function showResult(r, silent) {
     lastResult = r;
     var h = [];
+    if (r.kind === "locked") {
+      // opened with the personal link after replying: the reply can only be read
+      h.push('<h3 class="result-title">' + esc(t("r.formTitle")) + "</h3>");
+      h.push('<p class="result-lede">' + esc(t("r.locked")) + "</p>");
+      h.push(summaryHTML(r.data));
+    } else {
     if (r.kind !== "exists") h.push('<h3 class="result-title">' + esc(t("r.thanks", { name: r.first })) + "</h3>");
-    h.push('<p class="result-lede">' + esc(t(r.kind === "exists" ? "r.exists" : r.kind === "saved" && !r.fresh ? "r.saved" : "r.received")) + "</p>");
-    if (r.kind !== "saved") {
+    h.push('<p class="result-lede">' + esc(t(r.kind === "exists" ? (editable ? "r.exists" : "r.existsLocked") : r.kind === "saved" && !r.fresh ? "r.saved" : "r.received")) + "</p>");
+    }
+    if (r.kind !== "saved" && r.kind !== "locked") {
       var mail;
-      if (r.mailed) mail = "<p>" + esc(t("r.emailSent", { email: r.email })) + "</p><p><strong>" + esc(t("r.spam")) + "</strong></p>";
+      if (r.mailed) mail = "<p>" + esc(t(editable ? "r.emailSent" : "r.emailSentLocked", { email: r.email })) + "</p><p><strong>" + esc(t("r.spam")) + "</strong></p>";
       else mail = "<p>" + esc(t(r.wait ? "r.wait" : r.kind === "exists" ? "r.mailFailExists" : "r.mailFailSaved")) + "</p>" +
         '<p><button type="button" class="btn btn--line resend" data-act="resend">' + esc(t("r.resend")) + "</button></p>" +
         (r.detail ? '<p class="mail-detail">' + esc(t("r.detail", { detail: r.detail })) + "</p>" : "");
@@ -167,12 +195,14 @@
         '<a class="btn btn--navy" href="honeymoon.html#' + lang() + '">' + esc(t("giftcta.button")) + "</a></div>");
     }
     h.push('<p class="result-actions">' +
-      (editKey ? '<button type="button" class="btn-text" data-act="edit">' + icon("arrow-left") + "<span>" + esc(t("r.edit")) + "</span></button>" : "") +
+      (editKey && editable ? '<button type="button" class="btn-text" data-act="edit">' + icon("arrow-left") + "<span>" + esc(t("r.edit")) + "</span></button>" : "") +
+      (r.kind === "locked" ? '<button type="button" class="btn-text" data-act="notyou">' + esc(t("r.notYou")) + "</button>" : "") +
       '<a class="btn btn--line" href="index.html#' + lang() + '">' + icon("arrow-left") + "<span>" + esc(t("r.back")) + "</span></a></p>");
     result.innerHTML = h.join("");
     result.hidden = false;
     form.hidden = true;
     $("reply-title").hidden = true;
+    $("signed-as").hidden = true;   // the "you're changing the reply…" line belongs to the form
     if (silent) return;
     result.focus({ preventScroll: true });
     $("reply").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
@@ -208,9 +238,11 @@
       }
       editKey = k; editEmail = res.data.email; mode = "edit";
       firstReply = res.data.attending == null;
+      if (typeof res.data.editable === "boolean") editable = res.data.editable;
       store(KEY, k);
       fill(res.data);
       rememberGuest(res.data.first_name, res.data.last_name);
+      if (!firstReply && !editable) showResult({ kind: "locked", data: res.data }, !fromLink);
     });
   }
 
@@ -266,6 +298,29 @@
     var bad = validate(p);
     if (bad) { showError(t(bad[0])); if (bad[1]) bad[1].focus(); return; }
     showError("");
+    if (editable && mode === "edit" && !firstReply) { send(p); return; }
+    openCheck(p);   // last look before sending: it can't be changed afterwards
+  });
+
+  /* ---------- "Is everything right?" before sending ---------- */
+  var check = $("rsvp-check"), pending = null;
+  function openCheck(p) {
+    pending = p;
+    $("rc-summary").innerHTML = summaryHTML(p);
+    $("rc-warn").textContent = t(editable ? "r.checkWarnEditable" : "r.checkWarn");
+    if (typeof check.showModal === "function") check.showModal(); else check.setAttribute("open", "");
+    $("rc-send").focus();
+  }
+  $("rc-send").addEventListener("click", function () {
+    var p = pending; pending = null;
+    check.close();
+    if (p) send(p);
+  });
+  $("rc-back").addEventListener("click", function () { pending = null; check.close(); });
+  check.addEventListener("click", function (e) { if (e.target === check) { pending = null; check.close(); } });
+  check.addEventListener("close", function () { if (!submitBtn.disabled) submitBtn.focus(); });
+
+  function send(p) {
     submitBtn.disabled = true; submitBtn.textContent = t("r.sending");
     var done = function () { submitBtn.disabled = false; renderMode(); };
 
@@ -300,10 +355,11 @@
           mailed: mail.ok, wait: mail.wait, detail: mail.detail });
       });
     }, function () { done(); showError(t("r.errSave")); });
-  });
+  }
 
   result.addEventListener("click", function (e) {
     if (e.target.closest("[data-act=edit]")) backToForm();
+    if (e.target.closest("[data-act=notyou]")) { signOut(); return; }
     var again = e.target.closest("[data-act=resend]");
     if (again && lastResult) {
       again.disabled = true; again.textContent = t("r.sending");
@@ -317,11 +373,14 @@
   });
 
   // "Not you?": forget this reply on this phone and start a new one.
-  $("sign-out").addEventListener("click", function () {
+  function signOut() {
     store(KEY, null);
     mode = "new"; editKey = null; editEmail = null; firstReply = false; people = []; seats = 1; seatsTouched = false;
+    lastResult = null; result.hidden = true; result.innerHTML = "";
+    form.hidden = false; $("reply-title").hidden = false;
     form.reset(); renderAll(); form.first.focus();
-  });
+  }
+  $("sign-out").addEventListener("click", signOut);
 
   document.addEventListener("sm:lang", function () {
     renderAll();
@@ -341,6 +400,9 @@
     // keep the key out of the address bar (screenshots, sharing); it's remembered on this phone
     history.replaceState(null, "", location.pathname + location.hash);
   }
+  client.rpc("site_settings", {}).then(function (res) {
+    if (res.data && typeof res.data.rsvp_editable === "boolean") { editable = res.data.rsvp_editable; renderMode(); }
+  }, function () {});
   var k = fromLink || read(KEY);
   if (k) openWithKey(k, hadKey);
   else if (hadKey) $("link-error").hidden = false;

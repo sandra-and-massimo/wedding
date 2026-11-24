@@ -17,7 +17,6 @@
   var avail = {};              // { itemId: { max, taken } } for limited items
   var HOLD = "sm-pending";
   var pending = loadPending(); // this guest's own 30-minute hold: { ref, hold: { itemId: qty }, at }
-  var dest = "cn";
 
   var $ = function (id) { return document.getElementById(id); };
   var panel = $("ideas-panel"), cart = $("cart"), form = $("pledge"), result = $("result");
@@ -148,24 +147,14 @@
   }
 
   function renderPanel() {
-    var groups = dest === "any" ? ["any"] : ["flight", "experience", "night", "food"];
     var html = "";
-    groups.forEach(function (g) {
-      var items = DATA.items.filter(function (it) { return it.dest === dest && it.group === g; });
+    DATA.groups.forEach(function (g) {
+      var items = DATA.items.filter(function (it) { return it.group === g; });
       if (!items.length) return;
       html += '<section class="gift-group gift-group--' + g + '"><h3 class="gift-group-title">' + esc(t("g.group." + g)) + "</h3>" +
         '<ul class="gift-grid">' + items.map(cardHTML).join("") + "</ul></section>";
     });
     panel.innerHTML = html;
-    panel.setAttribute("aria-labelledby", "tab-" + dest);
-  }
-
-  function renderTabs() {
-    document.querySelectorAll(".dest-tabs [role=tab]").forEach(function (b) {
-      var on = b.getAttribute("data-dest") === dest;
-      b.setAttribute("aria-selected", String(on));
-      b.tabIndex = on ? 0 : -1;
-    });
   }
 
   /* ---------- basket and checkout ---------- */
@@ -195,7 +184,7 @@
     form.hidden = false;
   }
 
-  function renderAll() { renderTabs(); renderPanel(); renderCart(); renderBar(); }
+  function renderAll() { renderPanel(); renderCart(); renderBar(); }
 
   /* ---------- "i": what is it? (Wikipedia link + photo credit) ---------- */
   var sheet = $("gift-info"), infoId = null, infoOpener = null;
@@ -390,25 +379,6 @@
   }
 
   /* ---------- events ---------- */
-  document.querySelector(".dest-tabs").addEventListener("click", function (e) {
-    var b = e.target.closest("[role=tab]");
-    if (!b) return;
-    dest = b.getAttribute("data-dest");
-    renderTabs(); renderPanel();
-  });
-  document.querySelector(".dest-tabs").addEventListener("keydown", function (e) {
-    var tabs = Array.prototype.slice.call(document.querySelectorAll(".dest-tabs [role=tab]"));
-    var i = tabs.indexOf(document.activeElement);
-    if (i < 0) return;
-    var n = e.key === "ArrowRight" ? i + 1 : e.key === "ArrowLeft" ? i - 1 : e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1 : null;
-    if (n == null) return;
-    e.preventDefault();
-    n = (n + tabs.length) % tabs.length;
-    dest = tabs[n].getAttribute("data-dest");
-    renderTabs(); renderPanel();
-    tabs[n].focus();
-  });
-
   panel.addEventListener("click", function (e) {
     var ib = e.target.closest("button.gift-info");
     if (ib) { openInfo(ib.getAttribute("data-info"), ib); return; }

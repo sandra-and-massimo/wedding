@@ -83,3 +83,15 @@ legend + .hint { margin-top: 2px; }
 .policy li + li { margin-top: 6px; }
 .policy a { font-weight: 700; color: inherit; overflow-wrap: anywhere; }
 .policy-date { margin-top: 36px; font-size: .9rem; opacity: .8; }
+
+/* a reply as a summary (review dialog, read-only view) */
+.reply-summary { margin-top: 18px; display: grid; gap: 10px; }
+.reply-summary > div { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr); gap: 2px 16px; padding-bottom: 10px; border-bottom: 1px solid rgb(10 46 92 / .14); }
+.reply-summary dt { font-weight: 700; }
+.reply-summary dd { margin: 0; overflow-wrap: anywhere; }
+@media (max-width: 560px) { .reply-summary > div { grid-template-columns: minmax(0, 1fr); } }
+.rsvp-check { width: min(520px, calc(100% - 32px)); }
+.rsvp-check .gi-body { padding: 26px 24px 24px; }
+.rc-warn { margin-top: 12px; padding: 12px 16px; border-radius: 14px; background: #FFF1EB; font-weight: 650; }
+.rc-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 22px; }
+.rc-actions .btn--rsvp { min-height: 52px; padding: 10px 32px; font-size: 1.15rem; }

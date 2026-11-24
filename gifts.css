@@ -17,16 +17,7 @@
 /* ---------- ideas ---------- */
 .ideas { position: relative; background: var(--canvas); padding-block: calc(var(--s) / 2 + clamp(40px, 5vw, 72px)) calc(var(--d) / 2 + clamp(80px, 9vw, 120px)); }
 .ideas:focus { outline: none; box-shadow: none; }
-.dest-tabs { display: flex; flex-wrap: wrap; gap: 10px; }
-.dest-tabs [role="tab"] {
-  font: inherit; font-weight: 700; font-size: 1.05rem; color: var(--navy); background: var(--canvas);
-  min-height: 48px; padding: 10px 22px; border: 2px solid var(--navy); border-radius: 999px; cursor: pointer;
-  transition: background-color 200ms ease, color 200ms ease, transform 160ms var(--ease-out);
-}
-.dest-tabs [role="tab"]:active { transform: scale(.97); }
-.dest-tabs [role="tab"][aria-selected="true"] { background: var(--navy); color: #fff; }
-@media (hover: hover) and (pointer: fine) { .dest-tabs [role="tab"]:hover:not([aria-selected="true"]) { background: var(--tint); } }
-.ideas-status { margin-top: 16px; font-weight: 650; color: var(--orange-ink); }
+@media (hover: hover) and (pointer: fine) { .ideas-status { margin-top: 16px; font-weight: 650; color: var(--orange-ink); }
 
 .gift-group { margin-top: clamp(40px, 5vw, 64px); }
 .gift-group-title { font-size: clamp(1.5rem, 1vw + 1.1rem, 2rem); font-weight: 800; letter-spacing: -.02em; }
@@ -83,12 +74,6 @@
 
 /* the flight is the one most guests will share: a wide print */
 @media (min-width: 640px) {
-  .gift-group--flight .gift-grid { grid-template-columns: minmax(0, 640px); }
-  .gift-group--flight .gift { flex-direction: row; gap: 20px; padding: 12px 20px 12px 12px; }
-  .gift-group--flight .gift-print { flex: 0 0 46%; aspect-ratio: 4 / 3; }
-  .gift-group--flight .gift-body { padding: 8px 0 4px; }
-  .gift-group--flight .gift-name { font-size: 1.4rem; }
-  .gift-group--flight .gift-desc { font-size: 1.05rem; }
 }
 
 /* already given: greyed out, nobody's name */
@@ -104,10 +89,7 @@
   .gift-desc { font-size: .9rem; }
   .gift-price strong { font-size: 1.2rem; }
   .gift-meta { font-size: .8rem; }
-  .dest-tabs { flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; margin-inline: -16px; padding: 4px 16px 8px; scrollbar-width: none; }
-  .dest-tabs::-webkit-scrollbar { display: none; }
-  .dest-tabs [role="tab"] { flex: none; scroll-snap-align: start; }
-}
+  }
 
 /* ---------- checkout ---------- */
 .checkout { position: relative; background: var(--blue); padding-block: calc(var(--d) / 2 + clamp(56px, 7vw, 96px)) clamp(80px, 10vw, 128px); scroll-margin-top: 0; }
@@ -192,8 +174,7 @@
 .noscript { margin-top: 24px; padding: 20px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .gift, .gift-add, .stepper button, .dest-tabs [role="tab"] { transition: background-color 200ms ease, color 200ms ease; }
-  .gift:not(.is-gone):hover { transform: rotate(var(--r)); }
+  .gift, .gift-add, .stepper button,   .gift:not(.is-gone):hover { transform: rotate(var(--r)); }
   .basket-bar { transform: translate(-50%, 0); transition: opacity 220ms ease; }
 }
 

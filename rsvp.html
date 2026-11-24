@@ -44,7 +44,7 @@ d.className+=' js';setTimeout(function(){d.classList.add('ready')},1500);})();
     <div class="sign hero-sign gift-intro">
       <h1 class="gift-title" data-i18n="rsvp.title">Will you be there?</h1>
       <p class="gift-lede rsvp-when" data-i18n="foot.date">Saturday 8 May 2027 · Torre di Palme &amp; Porto San Giorgio</p>
-      <p data-i18n="r.intro">Tell us who's coming. We'll email you a link so you can change your reply at any time.</p>
+      <p data-i18n="r.intro">Tell us who's coming. We'll email you a confirmation with your personal link.</p>
     </div>
   </div>
 </header>
@@ -73,7 +73,7 @@ d.className+=' js';setTimeout(function(){d.classList.add('ready')},1500);})();
           <div class="field" id="email-field">
             <label for="r-email" data-i18n="r.email">Email</label>
             <input id="r-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200" aria-describedby="r-email-hint">
-            <p class="hint" id="r-email-hint"><span data-i18n="r.emailHint">We'll send you a link to see or change your reply. Only Sandra and Massimo will see your details.</span> <a class="privacy-link" href="privacy.html" data-href="privacy.html" data-keep-lang target="_blank" rel="noopener" data-i18n="priv.link">How we handle your data</a></p>
+            <p class="hint" id="r-email-hint"><span data-i18n="r.emailHint">We'll email you a confirmation with your personal link. Only Sandra and Massimo will see your details.</span> <a class="privacy-link" href="privacy.html" data-href="privacy.html" data-keep-lang target="_blank" rel="noopener" data-i18n="priv.link">How we handle your data</a></p>
           </div>
           <label class="consent"><input type="checkbox" id="r-news" name="news"><span data-i18n="news.optin">Keep us posted by email if anything changes (times, shuttle…). Only about the wedding.</span></label>
 
@@ -132,6 +132,18 @@ d.className+=' js';setTimeout(function(){d.classList.add('ready')},1500);})();
   </section>
 
 </main>
+
+<dialog class="gift-sheet rsvp-check" id="rsvp-check" aria-labelledby="rc-title">
+  <div class="gi-body">
+    <h3 id="rc-title" class="gi-title" data-i18n="r.checkTitle">Is everything right?</h3>
+    <p class="rc-warn" id="rc-warn">Once you send your reply, you won't be able to change it here. Please check it carefully.</p>
+    <div id="rc-summary"></div>
+    <div class="rc-actions">
+      <button type="button" class="btn btn--rsvp" id="rc-send" data-i18n="r.checkSend">Yes, send it</button>
+      <button type="button" class="btn-text" id="rc-back" data-i18n="r.checkBack">Let me check again</button>
+    </div>
+  </div>
+</dialog>
 
 <footer class="foot">
   <p class="foot-names">Sandra &amp; Massimo</p>

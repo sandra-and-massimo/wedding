@@ -16,9 +16,9 @@ window.SM_EXTRA = {
     "p.whyH": "Why",
     "p.why": "Only to organise the wedding: to know who's coming, plan seats, menu and shuttles, send you your personal link and thank you for gifts. We use your details because you give them to us for this (GDPR art. 6(1)(b) and (f)). Wedding updates and allergies only with your consent (art. 6(1)(a) and 9(2)(a)).",
     "p.healthH": "Allergies",
-    "p.health": "Allergies and intolerances can reveal health information. By writing them, you agree that we use them only to plan the menu and, as far as needed, share them with the caterer. You can delete them at any time from your personal link.",
+    "p.health": "Allergies and intolerances can reveal health information. By writing them, you agree that we use them only to plan the menu and, as far as needed, share them with the caterer. To change or delete them, write to us.",
     "p.newsH": "Wedding updates",
-    "p.news": "If you tick “keep us posted”, we'll email you only about the wedding (for example if times, places or the shuttle change). You can change your mind at any time from your personal link or by replying to one of our emails.",
+    "p.news": "If you tick “keep us posted”, we'll email you only about the wedding (for example if times, places or the shuttle change). You can change your mind at any time by replying to one of our emails.",
     "p.whoElseH": "Who else handles it",
     "p.whoElse": "No other guest sees your details. Three technical services store or deliver them for us: Supabase (database, in Frankfurt, EU), Netlify (hosts this site, USA) and Google Gmail (sends our emails, USA). The US services rely on the safeguards the GDPR requires for transfers, such as the EU–US Data Privacy Framework.",
     "p.deviceH": "On your device",
@@ -26,8 +26,8 @@ window.SM_EXTRA = {
     "p.keepH": "How long",
     "p.keep": "We'll delete your details by 31 December 2027.",
     "p.rightsH": "Your rights",
-    "p.rights": "You can see and change your reply at any time with your personal link. Write to us to get a copy of your details, correct them, have them deleted or stop the wedding updates. You can also complain to the data protection authority where you live (for example the Garante in Italy, the AEPD in Spain or the FDPIC in Switzerland).",
-    "p.updated": "Last updated: 21 November 2026"
+    "p.rights": "You can see your reply at any time with your personal link. Write to us to get a copy of your details, correct them, have them deleted or stop the wedding updates. You can also complain to the data protection authority where you live (for example the Garante in Italy, the AEPD in Spain or the FDPIC in Switzerland).",
+    "p.updated": "Last updated: 24 November 2026"
   },
   it: {
     "p.back": "Torna alla pagina del matrimonio",
@@ -44,9 +44,9 @@ window.SM_EXTRA = {
     "p.whyH": "Perché",
     "p.why": "Solo per organizzare il matrimonio: sapere chi viene, organizzare posti, menù e navette, mandarvi il vostro link personale e ringraziarvi per i regali. Usiamo i vostri dati perché ce li date per questo (GDPR art. 6(1)(b) e (f)). Aggiornamenti e allergie solo con il vostro consenso (art. 6(1)(a) e 9(2)(a)).",
     "p.healthH": "Allergie",
-    "p.health": "Allergie e intolleranze possono rivelare informazioni sulla salute. Scrivendole, accettate che le usiamo solo per il menù e, se serve, le comunichiamo al catering. Potete cancellarle quando volete dal vostro link personale.",
+    "p.health": "Allergie e intolleranze possono rivelare informazioni sulla salute. Scrivendole, accettate che le usiamo solo per il menù e, se serve, le comunichiamo al catering. Per modificarle o cancellarle, scriveteci.",
     "p.newsH": "Aggiornamenti sul matrimonio",
-    "p.news": "Se spuntate “teneteci aggiornati”, vi scriveremo solo per il matrimonio (per esempio se cambiano orari, luoghi o navette). Potete cambiare idea quando volete dal vostro link personale o rispondendo a una nostra email.",
+    "p.news": "Se spuntate “teneteci aggiornati”, vi scriveremo solo per il matrimonio (per esempio se cambiano orari, luoghi o navette). Potete cambiare idea quando volete rispondendo a una nostra email.",
     "p.whoElseH": "Chi altro li tratta",
     "p.whoElse": "Nessun altro invitato vede i vostri dati. Tre servizi tecnici li conservano o li inviano per noi: Supabase (database, a Francoforte, UE), Netlify (ospita il sito, USA) e Google Gmail (invia le nostre email, USA). I servizi statunitensi usano le garanzie richieste dal GDPR per i trasferimenti, come il Data Privacy Framework UE–USA.",
     "p.deviceH": "Sul vostro dispositivo",
@@ -54,8 +54,8 @@ window.SM_EXTRA = {
     "p.keepH": "Per quanto tempo",
     "p.keep": "Cancelleremo i vostri dati entro il 31 dicembre 2027.",
     "p.rightsH": "I vostri diritti",
-    "p.rights": "Potete vedere e modificare la vostra risposta quando volete con il link personale. Scriveteci per avere una copia dei vostri dati, correggerli, cancellarli o non ricevere più aggiornamenti. Potete anche rivolgervi all'autorità per la protezione dei dati del vostro paese (per esempio il Garante in Italia, l'AEPD in Spagna o l'IFPDT in Svizzera).",
-    "p.updated": "Ultimo aggiornamento: 21 novembre 2026"
+    "p.rights": "Potete rivedere la vostra risposta quando volete con il link personale. Scriveteci per avere una copia dei vostri dati, correggerli, cancellarli o non ricevere più aggiornamenti. Potete anche rivolgervi all'autorità per la protezione dei dati del vostro paese (per esempio il Garante in Italia, l'AEPD in Spagna o l'IFPDT in Svizzera).",
+    "p.updated": "Ultimo aggiornamento: 24 novembre 2026"
   },
   es: {
     "p.back": "Volver a la página de la boda",
@@ -72,9 +72,9 @@ window.SM_EXTRA = {
     "p.whyH": "Por qué",
     "p.why": "Solo para organizar la boda: saber quién viene, organizar sitios, menú y autobuses, enviaros vuestro enlace personal y daros las gracias por los regalos. Usamos vuestros datos porque nos los dais para esto (RGPD art. 6(1)(b) y (f)). Novedades y alergias solo con vuestro consentimiento (art. 6(1)(a) y 9(2)(a)).",
     "p.healthH": "Alergias",
-    "p.health": "Las alergias e intolerancias pueden revelar información de salud. Al escribirlas, aceptáis que las usemos solo para el menú y, si hace falta, se las comuniquemos al catering. Podéis borrarlas cuando queráis desde vuestro enlace personal.",
+    "p.health": "Las alergias e intolerancias pueden revelar información de salud. Al escribirlas, aceptáis que las usemos solo para el menú y, si hace falta, se las comuniquemos al catering. Para cambiarlas o borrarlas, escribidnos.",
     "p.newsH": "Novedades de la boda",
-    "p.news": "Si marcáis “mantenednos al día”, os escribiremos solo sobre la boda (por ejemplo, si cambian horarios, lugares o autobuses). Podéis cambiar de idea cuando queráis desde vuestro enlace personal o respondiendo a uno de nuestros emails.",
+    "p.news": "Si marcáis “mantenednos al día”, os escribiremos solo sobre la boda (por ejemplo, si cambian horarios, lugares o autobuses). Podéis cambiar de idea cuando queráis respondiendo a uno de nuestros emails.",
     "p.whoElseH": "Quién más los trata",
     "p.whoElse": "Ningún otro invitado ve vuestros datos. Tres servicios técnicos los guardan o envían por nosotros: Supabase (base de datos, en Fráncfort, UE), Netlify (aloja la web, EE. UU.) y Google Gmail (envía nuestros emails, EE. UU.). Los servicios de EE. UU. usan las garantías que exige el RGPD para las transferencias, como el Marco de Privacidad de Datos UE–EE. UU.",
     "p.deviceH": "En vuestro dispositivo",
@@ -82,7 +82,7 @@ window.SM_EXTRA = {
     "p.keepH": "Cuánto tiempo",
     "p.keep": "Borraremos vuestros datos antes del 31 de diciembre de 2027.",
     "p.rightsH": "Vuestros derechos",
-    "p.rights": "Podéis ver y cambiar vuestra respuesta cuando queráis con vuestro enlace personal. Escribidnos para obtener una copia de vuestros datos, corregirlos, borrarlos o dejar de recibir novedades. También podéis reclamar ante la autoridad de protección de datos de vuestro país (por ejemplo, la AEPD en España, el Garante en Italia o el FDPIC en Suiza).",
-    "p.updated": "Última actualización: 21 de noviembre de 2026"
+    "p.rights": "Podéis ver vuestra respuesta cuando queráis con vuestro enlace personal. Escribidnos para obtener una copia de vuestros datos, corregirlos, borrarlos o dejar de recibir novedades. También podéis reclamar ante la autoridad de protección de datos de vuestro país (por ejemplo, la AEPD en España, el Garante en Italia o el FDPIC en Suiza).",
+    "p.updated": "Última actualización: 24 de noviembre de 2026"
   }
 };
