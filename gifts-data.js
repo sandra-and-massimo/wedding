@@ -81,7 +81,7 @@ window.SM_GIFTS = {
     { id: "cn-night-yangshuo", group: "night", eur: 80, limit: null, icon: "bed", img: null,
       name: { en: "A night in Yangshuo", it: "Una notte a Yangshuo", es: "Una noche en Yangshuo" },
       desc: { en: "Waking up by the river, among the rice fields.", it: "Risveglio sul fiume, tra le risaie.", es: "Despertar junto al río, entre arrozales." } },
-    { id: "any-hotel", group: "night", eur: 350, limit: null, icon: "bed", img: null,
+    { id: "any-hotel", group: "night", eur: 150, limit: null, icon: "bed", img: null,
       name: { en: "A night in a charming hotel", it: "Una notte in un hotel di charme", es: "Una noche en un hotel con encanto" },
       desc: { en: "A special stay to enjoy our honeymoon.", it: "Un soggiorno speciale per goderci la nostra luna di miele.", es: "Una estancia especial para disfrutar de nuestra luna de miel." } },
     { id: "cn-night-shanghai", group: "night", eur: 450, limit: 1, icon: "bed", img: null,
