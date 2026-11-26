@@ -169,20 +169,6 @@ window.SM_GIFT_INFO = {
    "source": "https://commons.wikimedia.org/wiki/File:20240203_Lingering_Garden_09.jpg"
   }
  },
- "cn-zhujiajiao": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Zhujiajiao",
-   "it": null,
-   "es": null
-  },
-  "img": "img/gifts/cn-zhujiajiao",
-  "photo": {
-   "by": "Chensiyuan",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:1_zhujiajiao_2023_aerial.jpg"
-  }
- },
  "cn-huangshan": {
   "wiki": {
    "en": "https://en.wikipedia.org/wiki/Huangshan",
@@ -209,57 +195,6 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Chinese_tea_utensils.jpg"
-  }
- },
- "cn-tech": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Shenzhen",
-   "it": "https://it.wikipedia.org/wiki/Shenzhen",
-   "es": "https://es.wikipedia.org/wiki/Shenzhen"
-  },
-  "img": "img/gifts/cn-tech",
-  "photo": {
-   "by": "Charlie fong",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Commercial_area_of_futian_to_east2020.jpg"
-  }
- },
- "ph-elnido": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/El_Nido,_Palawan",
-   "it": "https://it.wikipedia.org/wiki/El_Nido",
-   "es": "https://es.wikipedia.org/wiki/El_Nido_(Filipinas)"
-  },
-  "img": "img/gifts/ph-elnido",
-  "photo": {
-   "by": "Marciano Villavito",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Big_Lagoon_at_El_Nido,_Palawan,_Philippines.jpg"
-  }
- },
- "ph-secretislands": {
-  "img": "img/gifts/ph-secretislands",
-  "photo": {
-   "by": "Tuderna",
-   "license": "CC BY 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Dicabaito_Island_Calamian_Group_-_panoramio.jpg"
-  }
- },
- "ph-coron": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Coron_Island",
-   "it": "https://it.wikipedia.org/wiki/Coron_(isola)",
-   "es": "https://es.wikipedia.org/wiki/Isla_de_Cor%C3%B3n"
-  },
-  "img": "img/gifts/ph-coron",
-  "photo": {
-   "by": "Monette Nyem",
-   "license": "CC BY 3.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Cayangan_Lake,_Coron_Islands,_Philippines_-_panoramio.jpg"
   }
  },
  "ph-wrecks": {
@@ -290,53 +225,20 @@ window.SM_GIFT_INFO = {
    "source": "https://commons.wikimedia.org/wiki/File:LONELY_OUTRIGGER.jpg"
   }
  },
- "ph-underground": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Puerto_Princesa_Subterranean_River_National_Park",
-   "it": "https://it.wikipedia.org/wiki/Parco_nazionale_del_fiume_sotterraneo_di_Puerto_Princesa",
-   "es": "https://es.wikipedia.org/wiki/Parque_nacional_del_r%C3%ADo_subterr%C3%A1neo_de_Puerto_Princesa"
-  },
-  "img": "img/gifts/ph-underground",
-  "photo": {
-   "by": "Ron Van Oers",
-   "license": "CC BY-SA 3.0 igo",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
-   "source": "https://commons.wikimedia.org/wiki/File:Puerto-Princesa_Subterranean_River_National_Park-112012.jpg"
-  }
- },
- "ph-chocolate": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Chocolate_Hills",
-   "it": "https://it.wikipedia.org/wiki/Chocolate_Hills",
-   "es": "https://es.wikipedia.org/wiki/Colinas_de_Chocolate"
-  },
-  "img": "img/gifts/ph-chocolate",
-  "photo": {
-   "by": "Philip Nalangan",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Hills_Bohol_Philippines.jpg"
-  }
- },
  "ph-firefly": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Loboc_River",
-   "it": null,
-   "es": null
-  },
   "img": "img/gifts/ph-firefly",
   "photo": {
-   "by": "Patrickroque01",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Loboc_River_Cruise_(Poblacion,_Loboc,_Bohol;_01-12-2023).jpg"
+   "by": "Bruce Marlin",
+   "license": "CC BY-SA 2.5",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "source": "https://commons.wikimedia.org/wiki/File:Photuris_lucicrescens.jpg"
   }
  },
  "ph-whaleshark": {
   "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Kawasan_Falls",
-   "it": null,
-   "es": null
+   "en": "https://en.wikipedia.org/wiki/Whale_shark",
+   "it": "https://it.wikipedia.org/wiki/Rhincodon_typus",
+   "es": "https://es.wikipedia.org/wiki/Rhincodon_typus"
   },
   "img": "img/gifts/ph-whaleshark",
   "photo": {
@@ -344,20 +246,6 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Whale_shark_in_Oslob,_Cebu_01.jpg"
-  }
- },
- "ph-siargao": {
-  "wiki": {
-   "en": "https://en.wikipedia.org/wiki/Siargao",
-   "it": "https://it.wikipedia.org/wiki/Siargao",
-   "es": "https://es.wikipedia.org/wiki/Siargao"
-  },
-  "img": "img/gifts/ph-siargao",
-  "photo": {
-   "by": "ChaasPrime",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Siargao_25.jpg"
   }
  },
  "ph-snorkel": {
@@ -480,15 +368,6 @@ window.SM_GIFT_INFO = {
    "source": "https://commons.wikimedia.org/wiki/File:Donghuamen_Night_Market.JPG"
   }
  },
- "ph-stars": {
-  "img": "img/gifts/ph-stars",
-  "photo": {
-   "by": "Simon_sees",
-   "license": "CC BY 2.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Ayana_Resort_Bali_(7188380293).jpg"
-  }
- },
  "ph-barefoot": {
   "img": "img/gifts/ph-barefoot",
   "photo": {
@@ -496,15 +375,6 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Sunset_at_El_Nido,_Palawan_Philippines.jpg"
-  }
- },
- "ph-breakfast": {
-  "img": "img/gifts/ph-breakfast",
-  "photo": {
-   "by": "Kalithecat00",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:El_Nido_Bay_December_2018.jpg"
   }
  },
  "ph-blueocean": {
@@ -532,15 +402,6 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Latte_and_dark_coffee.jpg"
-  }
- },
- "ph-cauayan": {
-  "img": "img/gifts/ph-cauayan",
-  "photo": {
-   "by": "Vyacheslav Argenberg",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Tropical_sunset_in_Bacuit_Bay,_El_Nido,_Palawan,_Philippines.jpg"
   }
  },
  "ph-secret": {
@@ -575,15 +436,6 @@ window.SM_GIFT_INFO = {
    "source": "https://commons.wikimedia.org/wiki/File:Beijing_hutong_area_3.jpg"
   }
  },
- "any-hotel": {
-  "img": "img/gifts/any-hotel",
-  "photo": {
-   "by": "Legolas1024",
-   "license": "CC BY-SA 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:%E5%92%8C%E5%B9%B3%E9%A5%AD%E5%BA%97%E5%8C%97%E6%A5%BC%C2%B7%E5%8D%8E%E6%87%8B%E9%A5%AD%E5%BA%97%C2%B7%E4%B8%8A%E6%B5%B7.jpg"
-  }
- },
  "cn-getaway": {
   "img": "img/gifts/cn-getaway",
   "photo": {
@@ -591,6 +443,79 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:1_xitang_zhejiang_2023.jpg"
+  }
+ },
+ "cn-night-shanghai": {
+  "img": "img/gifts/cn-night-shanghai",
+  "photo": {
+   "by": "xiquinhosilva",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Huangpu_Park_20124-Shanghai_(32208802494).jpg"
+  }
+ },
+ "cn-moller": {
+  "wiki": {
+   "en": "https://en.wikipedia.org/wiki/Moller_Villa",
+   "it": null,
+   "es": "https://es.wikipedia.org/wiki/Villa_Moller"
+  },
+  "img": "img/gifts/cn-moller",
+  "photo": {
+   "by": "Legolas1024",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Moller_Villa,_Shanghai.jpg"
+  }
+ },
+ "cn-no5": {
+  "img": "img/gifts/cn-no5",
+  "photo": {
+   "by": "ICOLEF / visualtravelguide.com",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Piliers_de_gr%C3%A8s_des_monts_Tianzi,_Zhangjiajie_(2026).jpg"
+  }
+ },
+ "ph-coronhotel": {
+  "img": "img/gifts/ph-coronhotel",
+  "photo": {
+   "by": "Monette Nyem",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cayangan_Lake,_Coron_Islands,_Philippines_-_panoramio.jpg"
+  }
+ },
+ "ph-salao": {
+  "img": "img/gifts/ph-salao",
+  "photo": {
+   "by": "Kalithecat00",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:El_Nido_Bay_December_2018.jpg"
+  }
+ },
+ "ph-funnylion": {
+  "img": "img/gifts/ph-funnylion",
+  "photo": {
+   "by": "mendhak",
+   "license": "CC BY-SA 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Luli_Island,_Honda_Bay,_Palawan,_Philippines.jpg"
+  }
+ },
+ "ph-massage": {
+  "wiki": {
+   "en": "https://en.wikipedia.org/wiki/Hilot",
+   "it": null,
+   "es": null
+  },
+  "img": "img/gifts/ph-massage",
+  "photo": {
+   "by": "Tara Angkor Hotel",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Foot_Massage_at_Tara_Spa_(5918684646).jpg"
   }
  },
  "cn-flight": {
@@ -623,15 +548,6 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Coron_skyline_Tapyas_(Coron,_Palwan;_03-16-2024).jpg"
-  }
- },
- "cn-massage": {
-  "img": "img/gifts/cn-massage",
-  "photo": {
-   "by": "Wellcome Collection",
-   "license": "CC BY 4.0",
-   "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-   "source": "https://commons.wikimedia.org/wiki/File:CHINESE_MEDICINE;_Foot_Massage_Wellcome_V0018518.jpg"
   }
  },
  "any-massage": {
