@@ -1,7 +1,6 @@
 /* Honeymoon page: same beach club, a different counter. Builds on styles.css. */
 
 /* ---------- header ---------- */
-.gifts-page .langbar { position: absolute; }
 .hero--short { min-height: auto; padding-bottom: clamp(72px, 9vh, 112px); }
 .hero--short .hero-inner { width: min(780px, 100%); }
 .gift-intro { text-align: left; }
@@ -19,7 +18,7 @@
 /* ---------- ideas ---------- */
 .ideas { position: relative; background: var(--canvas); padding-block: calc(var(--s) / 2 + clamp(40px, 5vw, 72px)) calc(var(--d) / 2 + clamp(80px, 9vw, 120px)); }
 .ideas:focus { outline: none; box-shadow: none; }
-@media (hover: hover) and (pointer: fine) { .ideas-status { margin-top: 16px; font-weight: 650; color: var(--orange-ink); }
+.ideas-status { margin-top: 16px; font-weight: 650; color: var(--orange-ink); }
 
 .gift-group { margin-top: clamp(40px, 5vw, 64px); }
 .gift-group-title { font-size: clamp(1.5rem, 1vw + 1.1rem, 2rem); font-weight: 800; letter-spacing: -.02em; }
