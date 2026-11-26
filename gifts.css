@@ -9,6 +9,8 @@
 .gift-intro p { margin-top: 12px; max-width: 58ch; }
 .gift-intro .gift-lede { font-size: clamp(1.15rem, .5vw + 1rem, 1.4rem); margin-top: 20px; }
 .gift-intro .gift-how { font-weight: 650; }
+.gift-drawing { display: block; width: 220px; height: auto; margin: -8px auto 12px; }
+@media (min-width: 641px) { .gift-drawing { float: right; width: 260px; margin: -16px -12px 8px 20px; } }
 .monogram--link { display: flex; align-items: center; gap: 8px; text-decoration: none; transition: background-color 200ms ease, color 200ms ease, transform 160ms var(--ease-out); }
 .monogram--link .ic { width: 1em; height: 1em; }
 .monogram--link:active { transform: scale(.97); }

@@ -169,8 +169,10 @@
   function renderCart() {
     if (!result.hidden) return;
     var lines = basketLines(), tt = totals();
+    // nothing chosen yet: no "Your gift" section at all
+    $("checkout").hidden = !lines.length;
     if (!lines.length) {
-      cart.innerHTML = '<p class="cart-empty">' + esc(t("g.cartEmpty")) + "</p>";
+      cart.innerHTML = "";
       form.hidden = true;
       return;
     }
@@ -272,6 +274,7 @@
       h.push(backLink());
     }
     result.innerHTML = h.join("");
+    $("checkout").hidden = false;
     result.hidden = false;
     form.hidden = true;
     cart.hidden = true;
@@ -403,8 +406,9 @@
     if (!b) return;
     setQty(b.closest("[data-id]").getAttribute("data-id"), 0);
     renderAll();
-    var next = cart.querySelector("button.cart-remove") || $("checkout-title");
-    if (next) { if (next.id === "checkout-title") next.tabIndex = -1; next.focus(); }
+    var next = cart.querySelector("button.cart-remove");
+    if (next) next.focus();
+    else $("ideas").focus({ preventScroll: true });   // the basket is empty, so "Your gift" has gone
   });
 
   form.addEventListener("submit", function (e) {
