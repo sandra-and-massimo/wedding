@@ -13,7 +13,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:The_Forbidden_City_-_View_from_Coal_Hill.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-forbidden-g1",
+    "photo": {
+     "by": "kallgan",
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "source": "https://commons.wikimedia.org/wiki/File:Sunset_of_the_Forbidden_City_2006.JPG"
+    }
+   },
+   {
+    "img": "img/gifts/cn-forbidden-g2",
+    "photo": {
+     "by": "Reinhold Möller Ermell",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Bejing_Forbidden_City_Relief-20071018-RM-152135.jpg"
+    }
+   }
+  ]
  },
  "cn-greatwall": {
   "wiki": {
@@ -27,7 +47,27 @@ window.SM_GIFT_INFO = {
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "source": "https://commons.wikimedia.org/wiki/File:Great_Wall_of_China_July_2006.JPG"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-greatwall-g1",
+    "photo": {
+     "by": "xiquinhosilva",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:67054-The-Great-Wall,_Mutianyu.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-greatwall-g2",
+    "photo": {
+     "by": "David290",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Mutianyu_Great_Wall.png"
+    }
+   }
+  ]
  },
  "cn-datong": {
   "wiki": {
@@ -41,7 +81,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Hangingtemple20190929.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-datong-g1",
+    "photo": {
+     "by": "Steve Cadman from London, U.K.",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yungang_Grottoes_02.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-datong-g2",
+    "photo": {
+     "by": "Steve Cadman from London, U.K.",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yungang_Grottoes_03.jpg"
+    }
+   }
+  ]
  },
  "cn-terracotta": {
   "wiki": {
@@ -55,7 +115,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:51714-Terracota-Army.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-terracotta-g1",
+    "photo": {
+     "by": "airunp",
+     "license": "Public domain",
+     "licenseUrl": "",
+     "source": "https://commons.wikimedia.org/wiki/File:Xian_guerreros_terracota_detalle.JPG"
+    }
+   },
+   {
+    "img": "img/gifts/cn-terracotta-g2",
+    "photo": {
+     "by": "CEphoto, Uwe Aranas",
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Xian_China_Terracotta-Army-Museum-02.jpg"
+    }
+   }
+  ]
  },
  "cn-pandas": {
   "wiki": {
@@ -69,7 +149,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Grosser_Panda.JPG"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-pandas-g1",
+    "photo": {
+     "by": "George Lu",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Panda_in_Chengdu_Research_Base_of_Giant_Panda_Breeding_-_7708872342.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-pandas-g2",
+    "photo": {
+     "by": "Jimmyshjj",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Chengdu_Research_Base_of_Giant_Panda_Breeding,_201907,_05.jpg"
+    }
+   }
+  ]
  },
  "cn-leshan": {
   "wiki": {
@@ -83,7 +183,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:36275-Leshan_(49067653383).jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-leshan-g1",
+    "photo": {
+     "by": "王计",
+     "license": "CC BY 2.5",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+     "source": "https://commons.wikimedia.org/wiki/File:Leshan_Giant_Buddha,_20161102.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-leshan-g2",
+    "photo": {
+     "by": "Francesco Bandarin",
+     "license": "CC BY-SA 3.0 igo",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/igo/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Mount_Emei_Scenic_Area,_including_Leshan_Giant_Buddha_Scenic_Area-111498.jpg"
+    }
+   }
+  ]
  },
  "cn-zhangjiajie": {
   "wiki": {
@@ -97,7 +217,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:1_tianzishan_wulingyuan_zhangjiajie_2012.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-zhangjiajie-g1",
+    "photo": {
+     "by": "xiquinhosilva",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_37754-Zhangjiajie_(48757570501).jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-zhangjiajie-g2",
+    "photo": {
+     "by": "xiquinhosilva",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Zhangjiajie_National_Forest_Park_38023-Zhangjiajie_(48757574461).jpg"
+    }
+   }
+  ]
  },
  "cn-tianmen": {
   "wiki": {
@@ -111,7 +251,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Tianmen_38330-Zhangjiajie_(49047525877).jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-tianmen-g1",
+    "photo": {
+     "by": "xiquinhosilva",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Tianmen_38330-Zhangjiajie_(49047525877).jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-tianmen-g2",
+    "photo": {
+     "by": "Qa003qa003",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Tianmen_Mountain_20180326_094808.jpg"
+    }
+   }
+  ]
  },
  "cn-longji": {
   "wiki": {
@@ -125,7 +285,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:LongshengRiceTerrace.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-longji-g1",
+    "photo": {
+     "by": "Kurinurm",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Longji_rice_terraces_-_2023_10_11_Kaur_Virunurm.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-longji-g2",
+    "photo": {
+     "by": "Immanuel Giel",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Rice_terraces_in_Longji_02.JPG"
+    }
+   }
+  ]
  },
  "cn-liriver": {
   "wiki": {
@@ -139,7 +319,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:87318-Li-River.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-liriver-g1",
+    "photo": {
+     "by": "chensiyuan",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:1_li_jiang_guilin_yangshuo_2011.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-liriver-g2",
+    "photo": {
+     "by": "Luka Peternel",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yangshuo-Li-River-2019-Luka-Peternel.jpg"
+    }
+   }
+  ]
  },
  "cn-yulong": {
   "wiki": {
@@ -153,7 +353,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Yulong.JPG"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-yulong-g1",
+    "photo": {
+     "by": "Jakub Hałun",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:20090502_Yangshuo_Yulong_River_6125.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-yulong-g2",
+    "photo": {
+     "by": "HALUK COMERTEL",
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Yulong_River-Yangshuo-Guilin-China_-_panoramio.jpg"
+    }
+   }
+  ]
  },
  "cn-suzhou": {
   "wiki": {
@@ -167,7 +387,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:20240203_Lingering_Garden_09.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-suzhou-g1",
+    "photo": {
+     "by": "King of Hearts",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_002.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-suzhou-g2",
+    "photo": {
+     "by": "King of Hearts",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Humble_Administrator%27s_Garden_Suzhou_November_2017_006.jpg"
+    }
+   }
+  ]
  },
  "cn-huangshan": {
   "wiki": {
@@ -181,7 +421,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Huangshan_pic_4.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-huangshan-g1",
+    "photo": {
+     "by": "颐园新居",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Huangshan-%E7%80%91%E5%B8%83%E4%BA%91_20141109.JPG"
+    }
+   },
+   {
+    "img": "img/gifts/cn-huangshan-g2",
+    "photo": {
+     "by": "JesseW900",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Sea_of_clouds_viewed_from_the_top_of_Huangshan.jpg"
+    }
+   }
+  ]
  },
  "cn-tea": {
   "wiki": {
@@ -195,7 +455,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Chinese_tea_utensils.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-tea-g1",
+    "photo": {
+     "by": "James Creegan",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Teochew_Kanghu_tea_preparation.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-tea-g2",
+    "photo": {
+     "by": "PierreSelim",
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kung_fu_cha_-_Shanghai_-_2013-08-15_-_1411.jpg"
+    }
+   }
+  ]
  },
  "ph-wrecks": {
   "wiki": {
@@ -209,7 +489,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Twin_Lagoon,_Coron,_Palawan.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-wrecks-g1",
+    "photo": {
+     "by": "geLowfish",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Lagoon_from_Coron_Palawan.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/ph-wrecks-g2",
+    "photo": {
+     "by": "André Héroux",
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Pier_of_Kayangan_lagoon,_Coron,_Palawan_-_panoramio.jpg"
+    }
+   }
+  ]
  },
  "ph-expedition": {
   "wiki": {
@@ -223,16 +523,47 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:LONELY_OUTRIGGER.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-expedition-g1",
+    "photo": {
+     "by": "Rocket03",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:El_Nido_Islands.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/ph-expedition-g2",
+    "photo": {
+     "by": "Lancegio2020",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Kayaking_in_Cadlao_island_El_Nido,_Palawan.jpg"
+    }
+   }
+  ]
  },
  "ph-firefly": {
   "img": "img/gifts/ph-firefly",
   "photo": {
-   "by": "Bruce Marlin",
-   "license": "CC BY-SA 2.5",
-   "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
-   "source": "https://commons.wikimedia.org/wiki/File:Photuris_lucicrescens.jpg"
-  }
+   "by": "Mike Lewinski from Tres Piedras, NM, United States",
+   "license": "CC BY 2.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Lupines_and_Fireflies_No._4_(14505155544).jpg"
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-firefly-g1",
+    "photo": {
+     "by": "Bernd Thaller",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Erratic_Flight_of_Fireflies.jpg"
+    }
+   }
+  ]
  },
  "ph-whaleshark": {
   "wiki": {
@@ -246,7 +577,18 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Whale_shark_in_Oslob,_Cebu_01.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-whaleshark-g1",
+    "photo": {
+     "by": "Eurasic",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Oslob_Whale_shark.jpg"
+    }
+   }
+  ]
  },
  "ph-snorkel": {
   "img": "img/gifts/ph-snorkel",
@@ -255,7 +597,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 3.0",
    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
    "source": "https://commons.wikimedia.org/wiki/File:Blue_Linckia_Starfish.JPG"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-snorkel-g1",
+    "photo": {
+     "by": "Dmitry Domrin",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Four_butterfly_fish_swim_over_a_coral_reef._Verde_Island_National_Marine_Reserve._Philippines.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/ph-snorkel-g2",
+    "photo": {
+     "by": "andre oortgijs",
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Green_view_at_coral-reef,_%22Dive_Solana%22,_Anilao_-_panoramio.jpg"
+    }
+   }
+  ]
  },
  "ph-bbq": {
   "img": "img/gifts/ph-bbq",
@@ -278,7 +640,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Lijiang_-_panoramio_(6).jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-lijiang-g1",
+    "photo": {
+     "by": "Luca Casartelli",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Old_Town_of_Lijiang_(21183527932).jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-lijiang-g2",
+    "photo": {
+     "by": "BrokenSphere",
+     "license": "CC BY 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Old_Town_of_Lijiang_at_night_8.JPG"
+    }
+   }
+  ]
  },
  "cn-rooftop": {
   "img": "img/gifts/cn-rooftop",
@@ -287,7 +669,27 @@ window.SM_GIFT_INFO = {
    "license": "CC0",
    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
    "source": "https://commons.wikimedia.org/wiki/File:Shanghai_skyline_from_the_bund.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-rooftop-g1",
+    "photo": {
+     "by": "David Zhang from Canada",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Sunset_-_the_Bund,_Shanghai_(47792991871).jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-rooftop-g2",
+    "photo": {
+     "by": "Ermell",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Shanghai_Bund-20150516-RM-173803.jpg"
+    }
+   }
+  ]
  },
  "cn-nimo": {
   "img": "img/gifts/cn-nimo",
@@ -324,7 +726,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Sichuan_Opera_in_Chengdu.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-opera-g1",
+    "photo": {
+     "by": "曠野蝸牛",
+     "license": "CC BY 2.5",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+     "source": "https://commons.wikimedia.org/wiki/File:%E8%AE%8A%E8%87%89%E3%80%82%E3%80%82%E3%80%82.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-opera-g2",
+    "photo": {
+     "by": "Joshua Shinavier",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:%22Face-Changing%22_(4213632444).jpg"
+    }
+   }
+  ]
  },
  "cn-hotpot": {
   "wiki": {
@@ -411,7 +833,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-secret-g1",
+    "photo": {
+     "by": "Wiki.mjmasangkay",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Our_friend_from_Pandan_Island_near_Apo_Reef.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/ph-secret-g2",
+    "photo": {
+     "by": "Diego Delso",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Tortuga_verde_(Chelonia_mydas),_Anilao,_Filipinas,_2023-08-22,_DD_259.jpg"
+    }
+   }
+  ]
  },
  "cn-night-yangshuo": {
   "img": "img/gifts/cn-night-yangshuo",
@@ -420,7 +862,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:1_guilin_yangshuo_2017.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-night-yangshuo-g1",
+    "photo": {
+     "by": "Jan Kranendonk",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Karst_landscape_near_Fuli,_Yangshuo,_China.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-night-yangshuo-g2",
+    "photo": {
+     "by": "Jan Kranendonk",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Mountains_of_Yangshuo,_China.jpg"
+    }
+   }
+  ]
  },
  "cn-night-beijing": {
   "wiki": {
@@ -434,7 +896,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Beijing_hutong_area_3.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-night-beijing-g1",
+    "photo": {
+     "by": "Caitriana Nicholson from 北京 ~ Beijing, 中国 ~ China",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:GongWangFu_courtyard_(2916271883).jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-night-beijing-g2",
+    "photo": {
+     "by": "Caitriana Nicholson from 北京 ~ Beijing, 中国 ~ China",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:GongWangFu_courtyard_(2917111732).jpg"
+    }
+   }
+  ]
  },
  "cn-getaway": {
   "img": "img/gifts/cn-getaway",
@@ -452,7 +934,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 2.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Huangpu_Park_20124-Shanghai_(32208802494).jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-night-shanghai-g1",
+    "photo": {
+     "by": "David Zhang from Canada",
+     "license": "CC BY-SA 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:A_night_at_the_Bund_in_Shanghai.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-night-shanghai-g2",
+    "photo": {
+     "by": "DvTor8303",
+     "license": "CC0",
+     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "source": "https://commons.wikimedia.org/wiki/File:Shanghai_Bund_at_night_20260417_(4).jpg"
+    }
+   }
+  ]
  },
  "cn-moller": {
   "wiki": {
@@ -466,7 +968,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Moller_Villa,_Shanghai.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-moller-g1",
+    "photo": {
+     "by": "Pvt pauline",
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Moller_Villa_in_Sjanghai.JPG"
+    }
+   },
+   {
+    "img": "img/gifts/cn-moller-g2",
+    "photo": {
+     "by": "dawvon",
+     "license": "CC BY 2.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Moller_Villa_pic_2.jpg"
+    }
+   }
+  ]
  },
  "cn-no5": {
   "img": "img/gifts/cn-no5",
@@ -475,7 +997,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:Piliers_de_gr%C3%A8s_des_monts_Tianzi,_Zhangjiajie_(2026).jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/cn-no5-g1",
+    "photo": {
+     "by": "颐园居",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Wulingyuan,_Zhangjiajie,_Hunan_20230702.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/cn-no5-g2",
+    "photo": {
+     "by": "Ethan Lee",
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Wulingyuan,_Zhangjiajie,_Hunan,_China_-_panoramio_(3).jpg"
+    }
+   }
+  ]
  },
  "ph-coronhotel": {
   "img": "img/gifts/ph-coronhotel",
@@ -484,7 +1026,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY 3.0",
    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Cayangan_Lake,_Coron_Islands,_Philippines_-_panoramio.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-coronhotel-g1",
+    "photo": {
+     "by": "Matikas 0805",
+     "license": "CC BY-SA 3.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Coron_from_Mount_Tapyas.JPG"
+    }
+   },
+   {
+    "img": "img/gifts/ph-coronhotel-g2",
+    "photo": {
+     "by": "Patrickroque01",
+     "license": "CC BY-SA 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Coron_sleeping_giant_rock_formation_(Coron,_Palawan;_03-16-2024).jpg"
+    }
+   }
+  ]
  },
  "ph-salao": {
   "img": "img/gifts/ph-salao",
@@ -493,7 +1055,27 @@ window.SM_GIFT_INFO = {
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
    "source": "https://commons.wikimedia.org/wiki/File:El_Nido_Bay_December_2018.jpg"
-  }
+  },
+  "gallery": [
+   {
+    "img": "img/gifts/ph-salao-g1",
+    "photo": {
+     "by": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Island_lagoon_in_Bacuit_Bay,_El_Nido,_Palawan,_Philippines.jpg"
+    }
+   },
+   {
+    "img": "img/gifts/ph-salao-g2",
+    "photo": {
+     "by": "Vyacheslav Argenberg",
+     "license": "CC BY 4.0",
+     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+     "source": "https://commons.wikimedia.org/wiki/File:Corong_Corong,_El_Nido,_Palawan_Island,_Philippines.jpg"
+    }
+   }
+  ]
  },
  "ph-funnylion": {
   "img": "img/gifts/ph-funnylion",

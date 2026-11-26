@@ -124,8 +124,8 @@
       : inf.img
         ? '<img src="' + esc(inf.img) + '-720.webp" srcset="' + esc(inf.img) + "-360.webp 360w, " + esc(inf.img) + '-720.webp 720w" sizes="(max-width: 560px) 48vw, 320px" alt="" loading="lazy" decoding="async">'
         : '<span class="gift-ph">' + icon(it.icon, "gift-ph-ic") + "</span>";
-    var infoBtn = inf.wiki ? '<button type="button" class="gift-info" data-info="' + it.id + '" aria-haspopup="dialog" aria-label="' +
-      esc(t("g.infoAbout", { name: name })) + '">' + icon("info") + "</button>" : "";
+    var infoBtn = '<button type="button" class="gift-info" data-info="' + it.id + '" aria-haspopup="dialog" aria-label="' +
+      esc(t("g.infoAbout", { name: name })) + '">' + icon("info") + "</button>";
     var ctrl;
     if (gone) {
       ctrl = '<p class="gift-gone">' + esc(single ? t("g.taken") : t("g.allTaken")) + "</p>";
@@ -188,37 +188,104 @@
 
   function renderAll() { renderPanel(); renderCart(); renderBar(); }
 
-  /* ---------- "i": what is it? (Wikipedia link + photo credit) ---------- */
-  var sheet = $("gift-info"), infoId = null, infoOpener = null;
+  /* ---------- the info sheet: photos, more about it, links ---------- */
+  var sheet = $("gift-info"), infoId = null, infoOpener = null, slideTimer = null;
+  var ext = ' target="_blank" rel="noopener"';
+  // every photo of an idea: the main one, then the extra ones (gifts-credits.js "gallery")
+  function photosOf(it) {
+    var inf = INFO[it.id] || {}, list = [];
+    if (it.img) list.push({ src: it.img, set: null, photo: null });
+    else if (inf.img) list.push({ src: inf.img + "-720.webp", set: inf.img + "-360.webp 360w, " + inf.img + "-720.webp 720w", photo: inf.photo || null });
+    (inf.gallery || []).forEach(function (g) { list.push({ src: g.img + "-720.webp", set: g.img + "-360.webp 360w, " + g.img + "-720.webp 720w", photo: g.photo }); });
+    return list;
+  }
+  function creditHTML(p) {
+    if (!p) return "";
+    var lic = p.license ? (p.licenseUrl ? '<a href="' + esc(p.licenseUrl) + '"' + ext + ">" + esc(p.license) + "</a>" : esc(p.license)) : "";
+    return esc(t("g.photoBy")) + ' <a href="' + esc(p.source) + '"' + ext + ">" + esc(p.by) + "</a>" + (lic ? " · " + lic : "") + " · " + esc(t("g.cropped"));
+  }
   function infoHTML(id) {
     var it = byId[id], inf = INFO[id] || {}, l = lang();
     var url = inf.wiki && (inf.wiki[l] || inf.wiki.en), inEnglish = inf.wiki && !inf.wiki[l] && l !== "en";
-    var src = it.img || (inf.img ? inf.img + "-720.webp" : null);
-    var ext = ' target="_blank" rel="noopener"';
+    var photos = photosOf(it), n = photos.length;
     var h = [];
-    if (src) h.push('<img class="gi-img" src="' + esc(src) + '" alt="">');
+    if (n) {
+      h.push('<div class="gi-gallery"><div class="gi-track" id="gi-track"' + (n > 1 ? ' tabindex="0" aria-label="' + esc(t("g.photos")) + '"' : "") + ">" +
+        photos.map(function (p, k) {
+          return '<img class="gi-img" src="' + esc(p.src) + '"' + (p.set ? ' srcset="' + esc(p.set) + '" sizes="(max-width: 480px) 100vw, 440px"' : "") +
+            ' alt=""' + (k ? ' loading="lazy"' : "") + ' decoding="async">';
+        }).join("") + "</div>");
+      if (n > 1) {
+        h.push('<button type="button" class="gi-nav gi-prev" data-go="-1" aria-label="' + esc(t("g.prevPhoto")) + '">' + icon("arrow-left") + "</button>" +
+          '<button type="button" class="gi-nav gi-next" data-go="1" aria-label="' + esc(t("g.nextPhoto")) + '">' + icon("arrow-left") + "</button>" +
+          '<p class="gi-dots" aria-hidden="true">' + photos.map(function (p, k) { return '<span' + (k ? "" : ' class="is-on"') + "></span>"; }).join("") + "</p>");
+      }
+      h.push("</div>");
+    }
     h.push('<div class="gi-body"><h3 id="gi-title" class="gi-title">' + esc(L(it.name)) + "</h3>");
     h.push('<p class="gi-desc">' + esc(L(it.desc)) + "</p>");
-    if (url) h.push('<p class="gi-wiki"><a class="btn btn--navy" href="' + esc(url) + '"' + ext + "><span>" + esc(t("g.wiki")) + "</span>" + icon("arrow-up-right") + "</a>" +
-      (inEnglish ? '<span class="gi-lang">' + esc(t("g.wikiEn")) + "</span>" : "") + "</p>");
-    if (!it.img && inf.photo) {
-      var p = inf.photo;
-      var lic = p.license ? (p.licenseUrl ? '<a href="' + esc(p.licenseUrl) + '"' + ext + ">" + esc(p.license) + "</a>" : esc(p.license)) : "";
-      h.push('<p class="gi-credit">' + esc(t("g.photoBy")) + ' <a href="' + esc(p.source) + '"' + ext + ">" + esc(p.by) + "</a>" +
-        (lic ? " · " + lic : "") + " · " + esc(t("g.cropped")) + "</p>");
-    }
+    if (it.more) h.push('<p class="gi-more">' + esc(L(it.more)) + "</p>");
+    h.push('<p class="gi-price"><strong>' + esc(money(it.eur)) + "</strong></p>");
+    var links = [];
+    if (it.web) links.push('<a class="btn btn--navy" href="' + esc(it.web.url) + '"' + ext + "><span>" + esc(t("g.web." + it.web.kind)) + "</span>" + icon("arrow-up-right") + "</a>");
+    if (url) links.push('<a class="btn btn--line" href="' + esc(url) + '"' + ext + "><span>" + esc(t("g.wiki")) + "</span>" + icon("arrow-up-right") + "</a>" +
+      (inEnglish ? '<span class="gi-lang">' + esc(t("g.wikiEn")) + "</span>" : ""));
+    if (links.length) h.push('<p class="gi-wiki">' + links.join("") + "</p>");
+    if (photos.some(function (p) { return p.photo; })) h.push('<p class="gi-credit" id="gi-credit">' + creditHTML(photos[0].photo) + "</p>");
     h.push("</div>");
     return h.join("");
   }
-  // every photo's credit, in the footer (needed by the licenses, also for ideas without an "i")
+  // every photo's credit, in the footer (the licenses ask for it)
   function renderCredits() {
-    var ext = ' target="_blank" rel="noopener"';
-    $("photo-credits").innerHTML = DATA.items.filter(function (it) { return !it.img && INFO[it.id] && INFO[it.id].photo; }).map(function (it) {
-      var p = INFO[it.id].photo;
-      var lic = p.license ? (p.licenseUrl ? '<a href="' + esc(p.licenseUrl) + '"' + ext + ">" + esc(p.license) + "</a>" : esc(p.license)) : "";
-      return "<li><strong>" + esc(L(it.name)) + '</strong>: <a href="' + esc(p.source) + '"' + ext + ">" + esc(p.by) + "</a>" + (lic ? " · " + lic : "") + "</li>";
-    }).join("");
+    var rows = [];
+    DATA.items.forEach(function (it) {
+      photosOf(it).forEach(function (p, k) {
+        if (!p.photo) return;
+        var lic = p.photo.license ? (p.photo.licenseUrl ? '<a href="' + esc(p.photo.licenseUrl) + '"' + ext + ">" + esc(p.photo.license) + "</a>" : esc(p.photo.license)) : "";
+        rows.push("<li><strong>" + esc(L(it.name)) + (k ? " (" + (k + 1) + ")" : "") + '</strong>: <a href="' + esc(p.photo.source) + '"' + ext + ">" + esc(p.photo.by) + "</a>" + (lic ? " · " + lic : "") + "</li>");
+      });
+    });
+    $("photo-credits").innerHTML = rows.join("");
   }
+
+  // slideshow: swipe, arrows, dots; turns by itself until the guest touches it
+  function slideIndex(track) { return Math.round(track.scrollLeft / Math.max(1, track.clientWidth)); }
+  function goSlide(track, k, smooth) {
+    var n = track.children.length;
+    k = (k + n) % n;
+    track.scrollTo({ left: k * track.clientWidth, behavior: smooth && !matchMedia("(prefers-reduced-motion: reduce)").matches ? "smooth" : "auto" });
+  }
+  function stopSlides() { if (slideTimer) { clearInterval(slideTimer); slideTimer = null; } }
+  function startSlides() {
+    stopSlides();
+    var track = $("gi-track");
+    if (!track || track.children.length < 2 || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    slideTimer = setInterval(function () { goSlide(track, slideIndex(track) + 1, true); }, 4000);
+  }
+  function wireSlides() {
+    var track = $("gi-track");
+    if (!track || track.children.length < 2) return;
+    var it = byId[infoId], photos = photosOf(it), last = 0;
+    track.addEventListener("scroll", function () {
+      var k = slideIndex(track);
+      if (k === last) return;
+      last = k;
+      var dots = sheet.querySelectorAll(".gi-dots span");
+      for (var i = 0; i < dots.length; i++) dots[i].className = i === k ? "is-on" : "";
+      var c = $("gi-credit");
+      if (c) c.innerHTML = creditHTML(photos[k] && photos[k].photo);
+    }, { passive: true });
+    ["pointerdown", "touchstart", "wheel", "keydown"].forEach(function (ev) { track.addEventListener(ev, stopSlides, { passive: true }); });
+    track.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); goSlide(track, slideIndex(track) + 1, true); }
+      if (e.key === "ArrowLeft") { e.preventDefault(); goSlide(track, slideIndex(track) - 1, true); }
+    });
+    startSlides();
+  }
+  sheet.addEventListener("click", function (e) {
+    var nav = e.target.closest("button[data-go]");
+    if (nav) { stopSlides(); var tr = $("gi-track"); goSlide(tr, slideIndex(tr) + Number(nav.getAttribute("data-go")), true); }
+  });
 
   function openInfo(id, opener) {
     if (!byId[id]) return;
@@ -226,9 +293,12 @@
     $("gi-content").innerHTML = infoHTML(id);
     if (typeof sheet.showModal === "function") { if (!sheet.open) sheet.showModal(); }
     else sheet.setAttribute("open", "");
+    sheet.scrollTop = 0;
+    wireSlides();
   }
   sheet.addEventListener("click", function (e) { if (e.target === sheet) sheet.close(); });   // tap outside closes
   sheet.addEventListener("close", function () {
+    stopSlides();
     infoId = null;
     var back = infoOpener && document.querySelector('button.gift-info[data-info="' + infoOpener.getAttribute("data-info") + '"]');
     if (back) back.focus({ preventScroll: true });
@@ -385,6 +455,8 @@
   panel.addEventListener("click", function (e) {
     var ib = e.target.closest("button.gift-info");
     if (ib) { openInfo(ib.getAttribute("data-info"), ib); return; }
+    var print = e.target.closest(".gift-print");   // tapping the photo opens the sheet too
+    if (print) { var ibtn = print.querySelector("button.gift-info"); openInfo(ibtn.getAttribute("data-info"), ibtn); return; }
     var b = e.target.closest("button[data-act]");
     if (!b) return;
     if (step) { releaseHold(); backToChoosing(); }

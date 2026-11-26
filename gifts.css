@@ -220,10 +220,31 @@
 }
 .gi-close .ic { width: 22px; height: 22px; fill: currentColor; }
 .gi-close:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
-.gi-img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.gi-gallery { position: relative; }
+.gi-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+.gi-track::-webkit-scrollbar { display: none; }
+.gi-track:focus-visible { outline: 3px solid var(--navy); outline-offset: -3px; }
+.gi-img { display: block; flex: none; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; scroll-snap-align: start; background: var(--tint); }
+.gi-nav {
+  position: absolute; top: 50%; translate: 0 -50%; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer; background: rgb(255 255 255 / .9); color: var(--navy); box-shadow: 0 2px 10px rgb(3 26 56 / .28);
+}
+.gi-nav::before { content: ""; position: absolute; inset: -4px; }
+.gi-nav .ic { width: 20px; height: 20px; fill: currentColor; }
+.gi-prev { left: 10px; }
+.gi-next { right: 10px; }
+.gi-next .ic { transform: scaleX(-1); }
+.gi-nav:active { transform: scale(.94); }
+.gi-nav:focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
+.gi-dots { position: absolute; left: 0; right: 0; bottom: 10px; display: flex; justify-content: center; gap: 6px; pointer-events: none; }
+.gi-dots span { width: 8px; height: 8px; border-radius: 50%; background: rgb(255 255 255 / .6); box-shadow: 0 1px 3px rgb(3 26 56 / .4); transition: background-color 200ms ease, transform 200ms ease; }
+.gi-dots span.is-on { background: #fff; transform: scale(1.25); }
+.gift-print { cursor: pointer; }
 .gi-body { padding: 20px 24px 24px; }
 .gi-title { font-size: 1.5rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; }
-.gi-desc { margin-top: 6px; }
+.gi-desc { margin-top: 8px; font-weight: 650; }
+.gi-more { margin-top: 10px; }
+.gi-price { margin-top: 12px; font-size: 1.35rem; color: var(--orange-ink); }
 .gi-wiki { margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
 .gi-wiki .btn { gap: 10px; min-height: 52px; padding: 10px 26px; font-size: 1.05rem; }
 .gi-wiki .ic { width: 1.1em; height: 1.1em; fill: currentColor; }
