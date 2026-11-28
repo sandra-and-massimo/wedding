@@ -231,6 +231,7 @@ p { text-wrap: pretty; }
 .gift-cta { position: relative; background: var(--canvas); padding-block: calc(var(--d) / 2 + clamp(64px, 8vw, 112px)) clamp(80px, 9vw, 120px); }
 .gift-cta-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
 .gift-cta .btn--navy { margin-top: 32px; }
+.gift-cta-more { margin-top: 16px; }
 .polaroid--gift { --r: 5deg; width: min(300px, 100%); justify-self: center; }
 .valance--canvas { --c: var(--canvas); }
 .btn--navy { background: var(--navy); color: #fff; font-size: clamp(1.1rem, .4vw + 1rem, 1.3rem); min-height: 56px; padding: 12px 40px; }
